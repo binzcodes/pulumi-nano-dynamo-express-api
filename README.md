@@ -1,6 +1,6 @@
-# Pulumi Template - Minimnal serverless api DynamoDB
+# Minimnal serverless api DynamoDB
 
-A minimal serverless API templaye using AWS API Gateway and Lambda functions serving a dynamic DynamoDB-based hit counter.
+A barebones serverless [Express](https://expressjs.com/) API template using Pulumi's cloud.HttpServer built on AWS API Gateway and Lambda functions, serving a dynamic DynamoDB-based hit counter.
 
 - Pulumi
 - AWS Lambda

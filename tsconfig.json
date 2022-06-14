@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "strict": true,
     "outDir": "bin",
     "target": "es2016",
@@ -9,10 +8,11 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "pretty": true,
-    "noImplicitReturns": true,
     "noImplicitAny": true,
+    "noImplicitReturns": true,
     "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
   "files": ["index.ts"]
 }

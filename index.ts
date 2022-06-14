@@ -1,15 +1,16 @@
 import * as AWS from "aws-sdk";
 import * as aws from "@pulumi/aws";
 import * as cloud from "@pulumi/cloud-aws";
-import express from 'express'
-import asyncHandler from "express-async-handler"
-
+import express from "express";
+import asyncHandler from "express-async-handler";
 
 const hits = new aws.dynamodb.Table("hits", {
   attributes: [{name: "Site", type: "S"}],
   hashKey: "Site",
   billingMode: "PAY_PER_REQUEST",
 });
+
+const hello = new aws.dynamodb.Table("hits", {});
 
 const update = async () => {
   const dc = new AWS.DynamoDB.DocumentClient();
@@ -24,7 +25,7 @@ const update = async () => {
     .promise();
 
   return result.Attributes!.Hits;
-}
+};
 
 const app = new cloud.HttpServer("myserver", () => {
   const app = express();

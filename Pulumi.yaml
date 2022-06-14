@@ -1,0 +1,3 @@
+name: pulumi-nano-dynamo-express-api
+runtime: nodejs
+description: A minimal serverless API with Pulumi DynamoDB

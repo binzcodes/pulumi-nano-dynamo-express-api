@@ -9,21 +9,15 @@ A minimal serverless API templaye using AWS API Gateway and Lambda functions ser
 
 ## run
 
-Deploy resources:
-
-```
+```bash
+# Deploy resources:
 pulumi up
-```
 
-Test the endpoint:
-
-```
+# Test the endpoint:
+pulumi stack select
 for i in {1..5}; do curl $(pulumi stack output url); done
-```
 
-Clean up resources:
-
-```
+# Clean up resources:
 pulumi destroy
 pulumi stack rm
 ```
